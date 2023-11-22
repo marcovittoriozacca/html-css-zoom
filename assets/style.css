@@ -2,10 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
-}
-img{
-    display: block;
+    border: 1px solid red;
 }
 
 html{
@@ -51,16 +48,23 @@ div.view{
 div.partecipants{
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 10px;
     row-gap: 1em;
 }
 
+
+/* problem */
 div.person{
     color: white;
+    width: calc((100% / 7) - 10px);
 }
 
+div.person div.photo img{
+    display: block;
+}
 
 div.person div.photo {
+    
     position: relative;
 }
 
@@ -69,6 +73,8 @@ div.person div.photo .name{
     bottom: 0;
 }
 
+
+/* ------------- */
 .name{
     background-color: rgba(128, 128, 128, 1);
     padding: 5px;
@@ -106,16 +112,17 @@ div.person div.photo .name{
 .bottom-bar ul{
     list-style-type: none;
     display: flex;
-    gap: 1.5em;
+    align-items: center;
+    gap: 1em;
 }
 .bottom-bar ul i{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .bottom-bar .end{
     flex-direction: row;
     align-items: center;
     padding-inline: 1em;
-    background-color: gray;
+    background-color: #4A4A4A;
     color: red;
 }
 .bottom-bar ul li{
@@ -123,6 +130,9 @@ div.person div.photo .name{
     display: flex;
     flex-direction: column;
     gap:0.3em;
+}
+.bottom-bar ul li:hover{
+    cursor: pointer;
 }
 .bottom-bar ul:first-of-type li:first-child{
     padding-left:0.5em;
@@ -138,11 +148,14 @@ div.person div.photo .name{
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     content: " \f106";
-    font-size: 0.4em;
+    font-size: 0.7em;
     color: white;
 }
 .bottom-bar ul:not(.bottom-bar ul:last-of-type){
     text-transform: capitalize;
+}
+.bottom-bar ul:last-of-type li{
+    align-self:stretch;
 }
 
 
