@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 img{
     display: block;
@@ -40,9 +40,27 @@ div.view{
     cursor: pointer;
 }
 
-/* individual person */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.partecipants{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    row-gap: 1em;
+}
+
 div.person{
+    flex-basis: calc(100% / 7 - 10px);
     color: white;
+}
+
+img{
+    width: 100%;
+    height: calc(100vh / 5);
 }
 
 div.person div.photo {
@@ -55,7 +73,7 @@ div.person div.photo .name{
 }
 
 .name{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(128, 128, 128, 1);
     padding: 5px;
     font-size: 0.9rem;
 }
@@ -67,11 +85,16 @@ div.person div.photo .name{
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-  }
-  .name::before{
+}
+.name::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 700;
     content: "\f131";
     margin-right: 5px;
-  }
-  
+}
+
+/* .bottom-bar{
+    background-color: #222222;
+} */
+
+
