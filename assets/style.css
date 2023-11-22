@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 img{
     display: block;
@@ -17,6 +17,7 @@ html{
 
 .zoom-app{
     height: 100vh;
+    overflow: auto;
     background-color: black;
 }
 
@@ -44,6 +45,7 @@ div.view{
 .container{
     width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 
 div.partecipants{
@@ -54,14 +56,9 @@ div.partecipants{
 }
 
 div.person{
-    flex-basis: calc(100% / 7 - 10px);
     color: white;
 }
 
-img{
-    width: 100%;
-    height: calc(100vh / 5);
-}
 
 div.person div.photo {
     position: relative;
@@ -93,8 +90,59 @@ div.person div.photo .name{
     margin-right: 5px;
 }
 
-/* .bottom-bar{
+
+
+.bottom-bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #222222;
-} */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.bottom-bar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.5em;
+}
+.bottom-bar ul i{
+    font-size: 2em;
+}
+.bottom-bar .end{
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 1em;
+    background-color: gray;
+    color: red;
+}
+.bottom-bar ul li{
+    padding-block: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap:0.3em;
+}
+.bottom-bar ul:first-of-type li:first-child{
+    padding-left:0.5em;
+}
+.green{
+    color: green;
+}
+.bottom-bar ul:nth-child(2) li:first-child i{
+    padding-left: 10px;
+}
+
+.angle::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: " \f106";
+    font-size: 0.4em;
+    color: white;
+}
+.bottom-bar ul:not(.bottom-bar ul:last-of-type){
+    text-transform: capitalize;
+}
 
 
