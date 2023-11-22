@@ -2,4 +2,76 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
+img{
+    display: block;
+}
+
+html{
+    font-family: sans-serif;
+    color: white;
+}
+
+
+
+.zoom-app{
+    height: 100vh;
+    background-color: black;
+}
+
+/* speaker view and maximize */
+div.view{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding:0.5em 0.5em 2em 0;
+}
+
+.zoom-app div.speaker,
+.zoom-app div.view div.maximize{ 
+    background-color: #4A4A4A;
+    padding: 5px;
+    border-radius: 5px;
+}
+.zoom-app div.speaker:hover,
+.zoom-app div.view div.maximize:hover{ 
+    cursor: pointer;
+}
+
+/* individual person */
+div.person{
+    color: white;
+}
+
+div.person div.photo {
+    position: relative;
+}
+
+div.person div.photo .name{
+    position: absolute;
+    bottom: 0;
+}
+
+.name{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+ /* mic icon */
+ .icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .name::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f131";
+    margin-right: 5px;
+  }
+  
